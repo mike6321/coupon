@@ -40,3 +40,23 @@ coupon-core/gradle/wrapper/gradle-wrapper.properties
 coupon-consumer/gradlew
 
 coupon-consumer/gradle/wrapper/gradle-wrapper.properties
+
+gradlew
+
+gradle/wrapper/
+
+.gradle/vcs-1/gc.properties
+
+.gradle/file-system.probe
+
+.gradle/buildOutputCleanup/
+
+.gradle/8.2/checksums/
+
+.gradle/8.2/dependencies-accessors/
+
+.gradle/8.2/fileHashes/
+
+.gradle/8.2/executionHistory/
+
+.gradle/8.2/
