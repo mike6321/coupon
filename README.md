@@ -7,3 +7,7 @@
 docker-compose up -d
 ```
 
+```sh
+docker-compose up -d --scale worker=3
+```
+
