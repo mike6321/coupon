@@ -60,3 +60,7 @@ gradle/wrapper/
 .gradle/8.2/executionHistory/
 
 .gradle/8.2/
+
+coupon-core/src/main/generated/
+coupon-api/src/main/generated/
+coupon-consumer/src/main/generated/
