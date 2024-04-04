@@ -64,3 +64,4 @@ gradle/wrapper/
 coupon-core/src/main/generated/
 coupon-api/src/main/generated/
 coupon-consumer/src/main/generated/
+*.pyc
