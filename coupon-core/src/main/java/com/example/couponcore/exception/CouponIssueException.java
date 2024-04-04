@@ -1,7 +1,9 @@
 package com.example.couponcore.exception;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+@Getter
 @RequiredArgsConstructor
 public class CouponIssueException extends RuntimeException {
 

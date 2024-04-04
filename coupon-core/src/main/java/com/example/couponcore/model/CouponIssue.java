@@ -33,4 +33,11 @@ public class CouponIssue extends BaseTimeEntity {
 
     private LocalDateTime dateUsed;
 
+    public static CouponIssue createCouponIssue(Long couponId, Long userId) {
+        return CouponIssue.builder()
+                .couponId(couponId)
+                .userId(userId)
+                .build();
+    }
+
 }
