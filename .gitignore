@@ -27,6 +27,16 @@ replay_pid*
 
 *.iml
 
-coupon-core/
+#coupon-core/
 
-coupon-consumer/
+#coupon-consumer/
+
+*.bat
+
+coupon-core/gradlew
+
+coupon-core/gradle/wrapper/gradle-wrapper.properties
+
+coupon-consumer/gradlew
+
+coupon-consumer/gradle/wrapper/gradle-wrapper.properties
