@@ -1,1 +1,3 @@
-spring.application.name=coupon-core
+spring:
+  application:
+    name: coupon-core
