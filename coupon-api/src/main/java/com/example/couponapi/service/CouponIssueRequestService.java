@@ -25,9 +25,7 @@ public class CouponIssueRequestService {
 
     public void issueRequestV2(CouponIssueRequestDto requestDto) {
         asyncCouponIssueServiceV1.issue(requestDto.couponId(), requestDto.userId());
-//        distributeLockExecutor.execute("lock_" + requestDto.couponId(), 100000, 100000,
-//                () -> couponIssueService.issue(requestDto.couponId(), requestDto.userId()));
-//        log.info("구폰 발급 완료. couponId: %s, userId: %s".formatted(requestDto.couponId(), requestDto.userId()));
+        log.info("구폰 발급 완료. couponId: %s, userId: %s".formatted(requestDto.couponId(), requestDto.userId()));
     }
 
 }
