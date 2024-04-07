@@ -19,4 +19,11 @@ public class CouponIssueController {
         return true;
     }
 
+    @PostMapping("/v1/issue-async")
+    public boolean issueV2(@RequestBody CouponIssueRequestDto requestDto) {
+        couponIssueRequestService.issueRequestV2(requestDto);
+        return true;
+    }
+
+
 }

@@ -7,3 +7,13 @@ Content-Type: application/json
   "userId": 1,
   "couponId": 5
 }
+
+### 쿠폰발행 (redis)
+
+POST http://localhost:8080/v1/issue-async
+Content-Type: application/json
+
+{
+  "userId": 12,
+  "couponId": 1
+}
