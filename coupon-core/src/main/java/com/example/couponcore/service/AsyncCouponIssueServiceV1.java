@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 public class AsyncCouponIssueServiceV1 {
 
     private final RedisRepository redisRepository;
-    private final CouponIssueService couponIssueService;
     private final CouponIssueRedisService couponIssueRedisService;
     private final ObjectMapper objectMapper;
     private final DistributeLockExecutor distributeLockExecutor;

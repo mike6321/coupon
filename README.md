@@ -70,3 +70,43 @@ Problem
 
 * 시간 복잡도도 O(logn) 이므로 Set을 사용하는게 좋을것 같다.
 
+------
+
+## Trouble Shooting
+
+* Lock 을 사용했을때 RPS : 약 1000
+
+<img width="1528" alt="image" src="https://github.com/mike6321/TIL/assets/33277588/b3752e1a-2b5e-4833-802d-d749b3059e4d">
+
+* Lock을 사용하지 않았을때 RPS: 약 7000 (동시성 보장  - 중복 발급 가능성 존재)
+
+<img width="1569" alt="image" src="https://github.com/mike6321/TIL/assets/33277588/e7b8c44c-1c0a-4af3-927a-5950df6e866b">
+
+-> 약 7배 이상 차이 발생
+
+### *동시성을 제어하면서 성능까지 빠를순 없을까?*
+
+* Redis 는 싱글스레드 이기 떄문에 스크립트로 일련의 로직 한번에 처리
+
+  ```java
+  private RedisScript<String> issueRequestScript() {
+          String script = """
+                  if redis.call('SISMEMBER', KEYS[1], ARGV[1]) == 1 then
+                      return '2'
+                  end
+                                  
+                  if tonumber(ARGV[2]) > redis.call('SCARD', KEYS[1]) then
+                      redis.call('SADD', KEYS[1], ARGV[1])
+                      redis.call('RPUSH', KEYS[2], ARGV[3])
+                      return '1'
+                  end
+                                  
+                  return '3'
+                  """;
+          return RedisScript.of(script, String.class);
+      }
+  ```
+
+<img width="1509" alt="image" src="https://github.com/mike6321/TIL/assets/33277588/ddf6f665-0904-4ee2-8a81-bea3bbe905fa">
+
+* 동시성을 보장하면서 빠른 RPS 보장 가능
