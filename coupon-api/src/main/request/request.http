@@ -14,6 +14,6 @@ POST http://localhost:8080/v1/issue-async
 Content-Type: application/json
 
 {
-  "userId": 1,
-  "couponId": 2
+  "userId": 3,
+  "couponId": 1
 }
