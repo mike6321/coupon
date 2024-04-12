@@ -1,7 +1,6 @@
 package com.example.couponcore.repository.mysql;
 
 import com.example.couponcore.model.CouponIssue;
-import com.example.couponcore.model.QCouponIssue;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
