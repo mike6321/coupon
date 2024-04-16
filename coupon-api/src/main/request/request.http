@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {
   "userId": 1,
-  "couponId": 5
+  "couponId": 1
 }
 
 ### 쿠폰발행 (redis)
